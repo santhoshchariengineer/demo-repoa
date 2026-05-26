@@ -21,7 +21,7 @@ pipeline{
            }
            }
            
-    Stage('deploy code to nginx'){
+    stage('deploy code to nginx'){
            sh 'cp index.html /usr/share/nginx/html'
            echo'deployment success'
     }
