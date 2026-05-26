@@ -24,6 +24,7 @@ pipeline{
     stage('deploy code to nginx'){
       steps{
            sh 'cp index.html /usr/share/nginx/html'
+        sh 'cp image0.png /usr/share/nginx/html'
            echo'deployment success'
     }
     }
