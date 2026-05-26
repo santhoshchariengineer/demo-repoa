@@ -10,7 +10,7 @@ pipeline{
     stage('Validate contect from SCM'){
       steps{
         script{
-        if (fileExists(index.html)){
+        if (fileExists('index.html')){
           sh grep -q '</html>' index.html
           echo'validation successful'
         } else {
