@@ -9,11 +9,13 @@ pipeline{
     
     stage('Validate contect from SCM'){
       steps{
-        if(fileExists(index.html)){
+        script{
+        if (fileExists(index.html)){
           sh grep -q '</html>' index.html
           echo'validation successful'
         } else {
           error'validation failed'
+        }
         }
            }
            }
